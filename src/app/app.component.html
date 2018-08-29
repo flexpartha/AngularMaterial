@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>MyMaterial</span>
+
+    <span class="example-spacer"></span>
+
+    <button mat-button>About</button>
+    <button mat-button>Services</button>
+    <button mat-button>Contact</button>
+  </mat-toolbar-row>
+
+  <!-- <mat-toolbar-row>
+    <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">verified_user</mat-icon>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span>Third Line</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon>
+  </mat-toolbar-row> -->
+</mat-toolbar>
+<div class="example-container">
+  <mat-card>
+    <mat-form-field>
+      <input matInput [(ngModel)]="answer" placeholder="Who has the best dev tutorials">
+    </mat-form-field>
+
+    <!-- <mat-form-field>
+    <textarea matInput placeholder="Textarea"></textarea>
+  </mat-form-field> -->
+
+    <!-- <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+    <br>
+    <button mat-raised-button (click)="showAnswer()">Answer Me</button>
+    <mat-spinner [style.display]="showSpinner?'block':'none'"></mat-spinner>
+  </mat-card>
+  <mat-card *ngIf="answerDisplay">
+    <h1>{{answerDisplay}},You are damm right.</h1>
+  </mat-card>
+</div>
